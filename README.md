@@ -5,8 +5,9 @@ My personal barebones setup script for a fresh Arch linux. This is meant as a re
 ## Requirements
 
 A raw installation of Arch Linux with:
-    - openssh
-    - python3
+
+- openssh
+- python3
 
 ## Role Variables
 
