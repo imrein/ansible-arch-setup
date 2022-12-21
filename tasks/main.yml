@@ -1,0 +1,20 @@
+---
+# All tasks
+
+- name: Update && upgrade system
+  become: true
+  pacman:
+    upgrade: yes
+    update_cache: yes
+
+- name: Install packages
+  import_tasks: packages.yml
+
+- name: Setup the system
+  import_tasks: setup.yml
+
+- name: Configure pacman
+  import_tasks: pacman.yml
+
+- name: Harden SSH
+  import_tasks: ssh.yml

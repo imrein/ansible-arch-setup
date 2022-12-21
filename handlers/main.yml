@@ -1,0 +1,12 @@
+---
+# Handlers
+- name: Restart sshd
+  service:
+    name: sshd
+    state: restarted
+
+- name: Enable & start sddm
+  service:
+    name: sddm
+    enabled: true
+    state: restarted

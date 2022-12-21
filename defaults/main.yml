@@ -1,0 +1,65 @@
+---
+# Default values
+
+###########
+# General #
+###########
+
+arch_hostname: test
+arch_user: rein
+arch_groups:
+  - audio
+  - docker
+  - libvirt
+  - video
+  - wheel
+
+############
+# Packages #
+############
+
+# General packages
+packages_setup:
+  - ansible
+  - cups
+  - cups-filters
+  - curl
+  - docker
+  - git
+  - hcxtools
+  - libvirt
+  - make
+  - nmap
+  - noto-fonts
+  - noto-fonts-cjk
+  - noto-fonts-emoji
+  - openssh
+  - python3
+  - tar
+  - tree
+  - vim
+  - wget
+  - xorg
+  - xorg-server
+  - zip
+  - zsh
+  - zsh-completions
+  - zsh-syntax-highlighting
+
+yay_dependencies: go
+
+# GUI packages
+enable_gui: true
+packages_gui:
+  - code
+  - dolphin
+  - firefox
+  - flameshot
+  - plasma-desktop
+  - qbittorrent
+  - sddm
+  - thunderbird
+  - tilix
+  - virt-manager
+  - vlc
+  - xorg

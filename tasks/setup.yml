@@ -1,0 +1,46 @@
+---
+# Task
+
+# Setting up new system
+- name: Set hostname
+  become: true
+  hostname:
+    name: "{{ arch_hostname }}"
+
+- name: Create user
+  become: true
+  user:
+    state: present
+    name: "{{ arch_user }}"
+    password: "{{ 'test' | password_hash('sha512') }}"
+    shell: /bin/zsh
+    home: /home/{{ arch_user }}
+    groups: "{{ arch_groups }}"
+    update_password: on_create
+  register: new_user
+
+# - name: Force "{{ arch_user }}" to change password
+#   command: chage -d 0 "{{ arch_user }}"
+#   when: new_user.changed
+
+- name: Give wheel group sudo rights
+  become: true
+  lineinfile:
+    path: /etc/sudoers
+    regexp: "^# %wheel ALL=(ALL:ALL) ALL"
+    line: "%wheel ALL=(ALL:ALL) ALL"
+
+- name: Create my dir structure
+  file:
+    path: "{{ item }}"
+    owner: "{{ arch_user }}"
+    group: "{{ arch_user }}"
+    state: directory
+  with_items:
+    - /home/{{ arch_user }}/gitProjects
+    - /home/{{ arch_user }}/Documents/backups
+    - /home/{{ arch_user }}/Documents/help
+    - /home/{{ arch_user }}/Documents/pentesting
+    - /home/{{ arch_user }}/Documents/vm
+    - /home/{{ arch_user }}/Documents/vm/iso
+    - /home/{{ arch_user }}/Documents/vm/network
