@@ -7,6 +7,7 @@
 
 arch_hostname: test
 arch_user: rein
+arch_user_pw: linux
 arch_groups:
   - audio
   - docker
