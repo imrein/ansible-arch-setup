@@ -13,13 +13,28 @@ A raw installation of Arch Linux with:
 
 The variables are defined in `defaults/main.yml`. These should be configured as needed:
 
-- **hostname**
-- **user**
-- **groups**
-- **packages**
+- `arch_hostname`
+- `arch_user`
+- `arch_user_pw`
+- `arch_groups`
+- `packages_setup`
+- `packages_gui`
 
 There is also a default option that will install a GUI (KDE-plasma) with my used software. 
 This can be disabled:
 ```yml
 enable_gui: false
+```
+
+## Warnings
+
+The user will have a hardcoded password `test` if unchanged.
+**Please change this ASAP after using this role.**
+
+## Example playbook
+
+```yml
+- hosts: general
+  roles:
+  - roles: ansible-arch-setup
 ```
