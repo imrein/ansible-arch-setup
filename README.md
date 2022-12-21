@@ -6,8 +6,8 @@ My personal barebones setup script for a fresh Arch linux. This is meant as a re
 
 A raw installation of Arch Linux with:
 
-- **openssh**
-- **python3**
+- `openssh`
+- `python3`
 
 ## Role Variables
 
@@ -28,7 +28,7 @@ enable_gui: false
 
 ## Warnings
 
-The user will have a hardcoded password `test` if unchanged.
+The user will have a hardcoded password `linux` if unchanged.
 **Please change this ASAP after using this role.**
 
 ## Example playbook
