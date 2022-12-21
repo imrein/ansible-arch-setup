@@ -40,8 +40,6 @@ packages_setup:
   - tree
   - vim
   - wget
-  - xorg
-  - xorg-server
   - zip
   - zsh
   - zsh-completions
@@ -64,3 +62,4 @@ packages_gui:
   - virt-manager
   - vlc
   - xorg
+  - xorg-server
