@@ -6,16 +6,17 @@ My personal barebones setup script for a fresh Arch linux. This is meant as a re
 
 A raw installation of Arch Linux with:
 
-- openssh
-- python3
+- **openssh**
+- **python3**
 
 ## Role Variables
 
 The variables are defined in `defaults/main.yml`. These should be configured as needed:
-    - hostname
-    - user
-    - groups
-    - packages
+
+- **hostname**
+- **user**
+- **groups**
+- **packages**
 
 There is also a default option that will install a GUI (KDE-plasma) with my used software. 
 This can be disabled:
