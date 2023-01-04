@@ -19,10 +19,6 @@
     update_password: on_create
   register: new_user
 
-# - name: Force "{{ arch_user }}" to change password
-#   command: chage -d 0 "{{ arch_user }}"
-#   when: new_user.changed
-
 - name: Give wheel group sudo rights
   become: true
   lineinfile:
