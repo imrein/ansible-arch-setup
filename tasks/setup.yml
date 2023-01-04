@@ -17,7 +17,6 @@
     home: /home/{{ arch_user }}
     groups: "{{ arch_groups }}"
     update_password: on_create
-  register: new_user
 
 - name: Give wheel group sudo rights
   become: true
