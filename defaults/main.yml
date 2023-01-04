@@ -45,8 +45,6 @@ packages_setup:
   - zsh-completions
   - zsh-syntax-highlighting
 
-yay_dependencies: go
-
 # GUI packages
 enable_gui: true
 packages_gui:
