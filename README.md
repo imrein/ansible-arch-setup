@@ -34,7 +34,10 @@ The user will have a hardcoded password `linux` if unchanged.
 ## Example playbook
 
 ```yml
-- hosts: general
+---
+- name: test playbook
+  hosts: general
+
   roles:
-  - roles: ansible-arch-setup
+  - role: ansible-arch-setup
 ```
