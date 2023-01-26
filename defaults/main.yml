@@ -31,9 +31,7 @@ packages_setup:
   - libvirt
   - make
   - nmap
-  - noto-fonts
-  - noto-fonts-cjk
-  - noto-fonts-emoji
+  - ttf-firacode-nerd
   - openssh
   - python3
   - tar
