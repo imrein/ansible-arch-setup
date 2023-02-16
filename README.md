@@ -13,12 +13,14 @@ A raw installation of Arch Linux with:
 
 The variables are defined in `defaults/main.yml`. These should be configured as needed:
 
-- `arch_hostname`
-- `arch_user`
-- `arch_user_pw`
-- `arch_groups`
-- `packages_setup`
-- `packages_gui`
+| Variable          | Default       | Info                                              |
+| :---------------- | :------------ | :------------------------------------------------ |
+| `arch_hostname`   | `test`        | Hostname of the system                            |
+| `arch_user`       | `rein`        | User that will be created                         |
+| `arch_user_pw`    | `linux`       | Password that will be prompted to change on login |
+| `arch_groups`     | See defaults  | Groups the new user should be added to            |
+| `packages_setup`  | See defaults  | General packages that should be installed         |
+| `packages_gui`    | See defaimts  | GUI packages that should be installed             |
 
 There is also a default option that will install a GUI (KDE-plasma) with my used software. 
 This can be disabled:
