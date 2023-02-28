@@ -8,7 +8,8 @@
     name: "{{ packages_setup }}"
 
 - name: Install & configure GUI
+  become: true
   pacman:
     name: "{{ packages_gui }}"
-  notify: Enable & start sddm
+  notify: Restart sddm
   when: enable_gui

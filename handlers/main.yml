@@ -5,7 +5,7 @@
     name: sshd
     state: restarted
 
-- name: Enable & start sddm
+- name: Restart sddm
   service:
     name: sddm
     enabled: true
