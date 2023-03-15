@@ -46,7 +46,6 @@ packages_setup:
 # GUI packages
 enable_gui: true
 packages_gui:
-  - code
   - dolphin
   - firefox
   - flameshot
