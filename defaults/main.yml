@@ -15,6 +15,9 @@ arch_groups:
   - video
   - wheel
 
+yaydir: /tmp/yay
+yay_version: 12.0.5-1
+
 ############
 # Packages #
 ############
@@ -47,7 +50,7 @@ packages_setup:
   - zsh-syntax-highlighting
 
 # GUI packages
-enable_gui: true
+enable_gui: false
 packages_gui:
   - dolphin
   - firefox

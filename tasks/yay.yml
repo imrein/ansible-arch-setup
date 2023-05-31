@@ -1,0 +1,42 @@
+---
+# Task
+
+# Check if already installed
+- name: Check installed
+  stat:
+    path: "/usr/bin/yay"
+  register: result
+
+# Install yay
+- name: Install if not installed
+  block:
+  - name: Clone yay
+    git:
+      repo: https://aur.archlinux.org/yay-git.git
+      dest: "{{ yaydir }}"
+      update: true
+
+  - name: Build yay
+    command:
+      chdir: "{{ yaydir }}"
+      cmd: "makepkg -sf --noconfirm"
+      creates: /usr/bin/yay
+
+  - name: Register yay package name
+    shell: "ls {{ yaydir }}/yay-git-*"
+    register: yay_package
+
+  - name: Install yay
+    become: true
+    pacman:
+      name: "{{ yay_package.stdout }}"
+      state: present
+      extra_args: "--overwrite '*'"
+
+  - name: Cleanup obsolete files
+    file:
+      path: "{{ item }}"
+      state: absent
+    loop:
+      - "{{ yaydir }}"
+  when: not result.stat.exists

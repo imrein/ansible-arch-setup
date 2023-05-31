@@ -1,11 +1,13 @@
 ---
 # Handlers
 - name: Restart sshd
+  become: true
   service:
     name: sshd
     state: restarted
 
 - name: Restart sddm
+  become: true
   service:
     name: sddm
     enabled: true
