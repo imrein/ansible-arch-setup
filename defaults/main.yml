@@ -5,7 +5,7 @@
 # General #
 ###########
 
-arch_hostname: test
+arch_hostname: archmachine
 arch_user: rein
 arch_user_pw: linux
 arch_groups:
@@ -61,5 +61,6 @@ packages_gui:
   - tilix
   - virt-manager
   - vlc
+  - wireshark
   - xorg
   - xorg-server
