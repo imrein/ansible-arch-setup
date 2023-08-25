@@ -46,9 +46,13 @@
     src: "/home/{{ arch_user }}/Git/dotfiles/{{ item }}"
     dest: "/home/{{ arch_user }}"
     remote_src: yes
+    owner: "{{ arch_user }}"
+    group: "{{ arch_user }}"
+    mode: '0766'
   with_items:
     - .config
     - .local
-    - .zshrc
     - .tmux.conf
     - .vimrc
+    - .zsh-theme-powerlevel10k
+    - .zshrc
