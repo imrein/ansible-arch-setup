@@ -40,7 +40,7 @@ packages_setup:
   - libvirt
   - make
   - nmap
-  - nvim
+  - neovim
   - openssh
   - python3
   - ripgrep
