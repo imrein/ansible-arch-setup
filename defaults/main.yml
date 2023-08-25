@@ -17,6 +17,9 @@ arch_groups:
 
 yaydir: /tmp/yay
 
+enable_gui: true
+enable_blackarch: false
+
 ############
 # Packages #
 ############
@@ -28,6 +31,7 @@ packages_setup:
   - cups-filters
   - curl
   - docker
+  - exa
   - fd
   - git
   - gzip
@@ -35,12 +39,12 @@ packages_setup:
   - libvirt
   - make
   - nmap
-  - ttf-firacode-nerd
   - openssh
   - python3
   - ripgrep
   - tar
   - tree
+  - ttf-firacode-nerd
   - vim
   - wget
   - zip
@@ -49,10 +53,9 @@ packages_setup:
   - zsh-syntax-highlighting
 
 # GUI packages
-enable_gui: true
 packages_gui:
+  - dnsmasq
   - dolphin
-  - dnsqmasq
   - firefox
   - flameshot
   - plasma-desktop
@@ -63,6 +66,24 @@ packages_gui:
   - tilix
   - virt-manager
   - vlc
-  - wireshark
   - xorg
   - xorg-server
+
+# Blackarch packages
+packages_blackarch:
+  - burpsuite
+  - crackmapexec
+  - dirb
+  - dirbuster
+  - exiftool
+  - gobuster
+  - hashcat
+  - hcxtools
+  - hydra
+  - john
+  - metasploit
+  - netcat
+  - nmap
+  - responder
+  - wfuzz
+  - wireshark-qt

@@ -13,3 +13,39 @@
     name: "{{ packages_gui }}"
   notify: Restart sddm
   when: enable_gui
+
+# Blackarch setup
+- name: Install blackarch repo if enabled
+  block:
+    - name: Check if repo is already installed
+      stat:
+        path: /etc/pacman.d/blackarch-mirrorlist
+      register: stat_result
+
+    - name: Setup blackarch repository
+      block:
+        - name: Download install script + checksum + make executable
+          get_url:
+            url: https://blackarch.org/strap.sh
+            mode: 0744
+            dest: /tmp/
+            checksum: sha1:5ea40d49ecd14c2e024deecf90605426db97ea0c
+
+        - name: Execute Blackarch script
+          command: bash /tmp/strap.sh
+
+        - name: Cleanup
+          file:
+            path: /tmp/strap.sh
+            state: absent
+
+        - name: Update repositories
+          pacman:
+            update_cache: yes
+
+        # Install packages
+        - name: Install packages
+          pacman:
+            name: "{{ packages }}"
+      when: not stat_result.stat.exists
+  when: enable_blackarch

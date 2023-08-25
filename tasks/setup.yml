@@ -32,7 +32,7 @@
     group: "{{ arch_user }}"
     state: directory
   with_items:
-    - /home/{{ arch_user }}/gitProjects
+    - /home/{{ arch_user }}/Git
     - /home/{{ arch_user }}/Documents/backups
     - /home/{{ arch_user }}/Documents/help
     - /home/{{ arch_user }}/Documents/pentesting

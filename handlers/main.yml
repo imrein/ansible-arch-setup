@@ -9,6 +9,6 @@
 - name: Restart sddm
   become: true
   service:
-    name: sddm
+    name: sddm.service
     enabled: true
     state: restarted
