@@ -52,10 +52,12 @@ packages_setup:
 enable_gui: true
 packages_gui:
   - dolphin
+  - dnsqmasq
   - firefox
   - flameshot
   - plasma-desktop
   - qbittorrent
+  - qemu-desktop
   - sddm
   - thunderbird
   - tilix

@@ -36,6 +36,4 @@
     - /home/{{ arch_user }}/Documents/backups
     - /home/{{ arch_user }}/Documents/help
     - /home/{{ arch_user }}/Documents/pentesting
-    - /home/{{ arch_user }}/Documents/vm
-    - /home/{{ arch_user }}/Documents/vm/iso
-    - /home/{{ arch_user }}/Documents/vm/network
+    - /home/{{ arch_user }}/Documents/iso
