@@ -2,7 +2,6 @@
 # All tasks
 
 - name: Update && upgrade system
-  become: true
   pacman:
     upgrade: yes
     update_cache: yes

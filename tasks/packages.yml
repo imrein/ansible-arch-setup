@@ -3,12 +3,10 @@
 
 # Install packages
 - name: Install general packages
-  become: true
   pacman:
     name: "{{ packages_setup }}"
 
 - name: Install & configure GUI
-  become: true
   pacman:
     name: "{{ packages_gui }}"
   notify: Restart sddm

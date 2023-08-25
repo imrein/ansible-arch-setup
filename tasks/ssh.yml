@@ -3,7 +3,6 @@
 
 # Harden SSH config
 - name: Backup SSH configuration
-  become: true
   copy:
     remote_src: yes
     src: /etc/ssh/sshd_config
@@ -16,14 +15,12 @@
     state: touch
 
 - name: Copy pub SSH key to machine
-  become: true
   authorized_key:
     user: "{{ arch_user }}"
     state: present
     key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
 
 - name: Edit SSH config
-  become: true
   replace:
     path: /etc/ssh/sshd_config
     regexp: '{{ item.regexp }}'

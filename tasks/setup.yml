@@ -3,12 +3,10 @@
 
 # Setting up new system
 - name: Set hostname
-  become: true
   hostname:
     name: "{{ arch_hostname }}"
 
 - name: Create user
-  become: true
   user:
     state: present
     name: "{{ arch_user }}"
@@ -19,7 +17,6 @@
     update_password: on_create
 
 - name: Give wheel group sudo rights
-  become: true
   lineinfile:
     path: /etc/sudoers
     regexp: "^# %wheel ALL=(ALL:ALL) ALL"

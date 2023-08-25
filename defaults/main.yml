@@ -15,8 +15,6 @@ arch_groups:
   - video
   - wheel
 
-yaydir: /tmp/yay
-
 enable_gui: true
 enable_blackarch: false
 

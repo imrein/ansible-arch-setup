@@ -3,7 +3,6 @@
 
 # Pacman configuration
 - name: Enable pacman colourised output and verbose package lists
-  become: true
   replace:
     path: /etc/pacman.conf
     regexp: '{{ item.regexp }}'
