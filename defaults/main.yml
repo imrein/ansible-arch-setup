@@ -27,6 +27,7 @@ dotfiles_repo: https://github.com/imrein/dotfiles.git
 # General packages
 packages_setup:
   - ansible
+  - bat
   - cups
   - cups-filters
   - curl
@@ -39,6 +40,7 @@ packages_setup:
   - libvirt
   - make
   - nmap
+  - nvim
   - openssh
   - python3
   - ripgrep
