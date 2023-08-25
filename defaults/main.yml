@@ -18,6 +18,8 @@ arch_groups:
 enable_gui: true
 enable_blackarch: false
 
+dotfiles_repo: https://github.com/imrein/dotfiles.git
+
 ############
 # Packages #
 ############

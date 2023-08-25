@@ -34,3 +34,21 @@
     - /home/{{ arch_user }}/Documents/help
     - /home/{{ arch_user }}/Documents/pentesting
     - /home/{{ arch_user }}/Documents/iso
+
+# Import dotfiles
+- name: Git checkout dotfiles
+  git:
+    repo: "{{ dotfiles_repo }}"
+    dest: "/home/{{ arch_user }}/Git/dotfiles"
+
+- name: Copy configs
+  copy:
+    src: "/home/{{ arch_user }}/Git/dotfiles/{{ item }}"
+    dest: "/home/{{ arch_user }}"
+    remote_src: yes
+  with_items:
+    - .config
+    - .local
+    - .zshrc
+    - .tmux.conf
+    - .vimrc
