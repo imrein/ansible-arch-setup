@@ -45,6 +45,7 @@ packages_setup:
   - python3
   - ripgrep
   - tar
+  - tldr
   - tree
   - ttf-firacode-nerd
   - vim
@@ -86,6 +87,8 @@ packages_blackarch:
   - netcat
   - nmap
   - perl-image-exiftool
+  - proxychains
   - responder
+  - tor
   - wfuzz
   - wireshark-qt
