@@ -44,6 +44,6 @@
         # Install packages
         - name: Install packages
           pacman:
-            name: "{{ packages }}"
+            name: "{{ packages_blackarch }}"
       when: not stat_result.stat.exists
   when: enable_blackarch
