@@ -15,11 +15,6 @@
 # Blackarch setup
 - name: Install blackarch repo if enabled
   block:
-    - name: Check if repo is already installed
-      stat:
-        path: /etc/pacman.d/blackarch-mirrorlist
-      register: stat_result
-
     - name: Setup blackarch repository
       block:
         - name: Download install script + checksum + make executable
@@ -45,5 +40,4 @@
         - name: Install packages
           pacman:
             name: "{{ packages_blackarch }}"
-      when: not stat_result.stat.exists
   when: enable_blackarch

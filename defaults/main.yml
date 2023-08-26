@@ -77,7 +77,6 @@ packages_blackarch:
   - crackmapexec
   - dirb
   - dirbuster
-  - exiftool
   - gobuster
   - hashcat
   - hcxtools
@@ -86,6 +85,7 @@ packages_blackarch:
   - metasploit
   - netcat
   - nmap
+  - perl-image-exiftool
   - responder
   - wfuzz
   - wireshark-qt
