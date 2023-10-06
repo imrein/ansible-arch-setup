@@ -32,11 +32,10 @@ packages_setup:
   - cups-filters
   - curl
   - docker
-  - exa
+  - eza
   - fd
   - git
   - gzip
-  - hcxtools
   - libvirt
   - make
   - nmap
@@ -68,7 +67,6 @@ packages_gui:
   - thunderbird
   - tilix
   - virt-manager
-  - vlc
   - xorg
   - xorg-server
 
